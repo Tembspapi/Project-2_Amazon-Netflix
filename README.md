@@ -98,7 +98,7 @@ For both dfs:
  Team - Group 4 (5)
 
 * Anderson Safo (SAFO99)
-* Cheila Bergamini
+* Cheila Bergamini (cheibergam)
 * Grace Cheuk (gw-sc)
 * Lionnel Tembu (Tembspapi)
 * Navindeep Bains (navinbains)
