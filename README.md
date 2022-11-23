@@ -63,6 +63,9 @@ For both dfs:
 5. explode rows into multiples rows for category column
 
 * insert screenshots of cleaned df and graphs
+![Netflix_cleaned_df.png](Images/Netflix_cleaned_df.png)
+![Amazon_cleaned_df.png](Images/Amazon_cleaned_df.png)
+
 
 ## Load
 
@@ -72,6 +75,9 @@ For both dfs:
     * with `id serial as primary key` to link the 2 tables together
 * loaded data from Pandas to sql
 
+![Amazon_sql_table.png](Images/Amazon_sql_table.png)
+![Netflix_sql_table.png](Images/Netflix_sql_table.png)
+
 ### SQL Query
 
 * SQL queries
@@ -80,6 +86,17 @@ For both dfs:
 ### Pandas & Matplotlib
 * make some diagrams
 * insert screenshots of cleaned df and graphs
+
+
+
+![categories.png](Images/categories.png)
+
+![netflix_directors.png](Images/.png)
+![amazon_directors.png](Images/.png)
+![directors.png](Images/directors.png)
+
+
+![Release_year.png](Images/Release_year.png)
 
 
 <!--
