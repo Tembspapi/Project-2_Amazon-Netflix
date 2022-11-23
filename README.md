@@ -86,7 +86,7 @@ Hree are samples of the cleaned datasets after cleaning:
 To produce some visual representation of the data we have looked at we created some graphs by querything the DataFrames.
 
 
-1. compare the number of released titles each year
+#### 1. compare the number of released titles each year
 
 A Pandas DataFrame was created for each platform's `release_year` and `title count` to compare the quantity of titles each platform was uploading for showing. 
 
@@ -94,7 +94,7 @@ We found that Amazon continues to release newer shows and movies, than Netflix d
 
 ![Release_year.png](Images/Release_year.png)
 
-2. compare the number of released categories each year
+#### 2. compare the number of released categories each year
 
 Categories was tricky to compare across both platforms, since both had their own versions of category names, so we had to clean the data by merging categories most commonly found together. Then filtering to show the most popular category genres released.
 
@@ -102,7 +102,7 @@ We found that Netflix has a high quantity of International (non-English) content
 
 ![categories.png](Images/categories.png)
 
-3. compare the most active directors
+#### 3. compare the most active directors
 
 To compare the most active directors released across each platform, we filtered out directors with less than 10 recurrences first, then kept only the top 10 directors of each platform. 
 
@@ -116,7 +116,7 @@ Also, the data shows that Amazon tended to release content of the same director 
 
 ![directors.png](Images/directors.png)
 
-4. compare the number country releases per year
+#### 4. compare the number country releases per year
 
 
 
