@@ -15,10 +15,10 @@ DAV Module 13 - Project 2 Group Challenge: ETL
 
 The aim of our project is to...
 <!-- uncover patterns in credit card fraud. We’ll examine relationships between transaction types and location, purchase prices and times of day, purchase trends over the course of a year, and other related relationships derived from the data. -->
-1. compare number of titles released each year
-2. compare number of released categories each year
-3. most active director
-4. which country releases the most each year?
+1. compare the number of released titles each year
+2. compare the number of released categories each year
+3. compare the most active directors
+4. compare the number country releases per year
 
 
 * Using relational db - pgAdmin
