@@ -91,8 +91,8 @@ For both dfs:
 
 ![categories.png](Images/categories.png)
 
-![netflix_directors.png](Images/.png)
-![amazon_directors.png](Images/.png)
+![Netflix_directors.png](Images/Netflix_directors.png)
+![Amazon_directors.png](Images/Amazon_directors.png)
 ![directors.png](Images/directors.png)
 
 
