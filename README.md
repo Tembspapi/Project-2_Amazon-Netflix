@@ -96,10 +96,24 @@ We found that Amazon continues to release newer shows and movies, than Netflix d
 
 #### 2. compare the number of released categories each year
 
-Categories was tricky to compare across both platforms, since both had their own versions of category names, so we had to clean the data by merging categories most commonly found together. Then filtering to show the most popular category genres released.
+Categories was tricky to compare across both platforms, since both had their own versions of category names, so we had to clean the data by merging and grouping these generic categories together. Then filtering to show the most popular category genres released.
+
+Individually looking at the top 5 categories:
+
+Netflix shows it's top category for releases in `International Movies` with a total of 2,624 titles, to `Documentaries` with 829 titles.
+![Netflix_top5cat.png](Images/Netflix_top5cat.png)
+
+Amazon shows it's top category for releases in `Drama` with 2,216 titles, to `Suspense` with 1,307 titles.
+![Amazon_top5cat.png](Images/Amazon_top5cat.png)
+
+After joining the two datasets we saw that there were categories of similarity listed under separate platforms, like Netflix: `Anime Features` and Amazon: `Anime`, `Animation`. But these could all be grouped together as `Animation`.
+![category_count.png](Images/category_count.png)
+
+
+Having cleaned the merged datasets by grouping categories generically together, we were able to condense the number of categories for comparison. The new dataframe sorted alphabetically, now shows 23 categories as opposed to previously 129 categories.
+![category_count2.png](Images/category_count2.png)
 
 We found that Netflix has a high quantity of International (non-English) content than Amazon does. The all-rounder most popular content released across both platforms is Drama.
-
 ![categories.png](Images/categories.png)
 
 #### 3. compare the most active directors
@@ -111,7 +125,7 @@ To compare the most active directors released across each platform, we filtered 
 
 
 
-We decided to merge the dataframes and display the most active directs in comparison across the platforms. The analysis shows that although most directors didn't overlap in platform, there was one most recurring director that has shows/movies released on both platforms `Jay Chapman`.
+We decided to merge the dataframes and display the most active directors in comparison across the platforms. The analysis shows that although most directors didn't overlap in platform, there was one most recurring director that has shows/movies released on both platforms `Jay Chapman`.
 Also, the data shows that Amazon tended to release content of the same director more than Netflix.
 
 ![directors.png](Images/directors.png)
