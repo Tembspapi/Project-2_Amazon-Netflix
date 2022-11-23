@@ -15,21 +15,20 @@ DAV Module 13 - Project 2 Group Challenge: ETL
 
 The aim of our project is to...
 <!-- uncover patterns in credit card fraud. We’ll examine relationships between transaction types and location, purchase prices and times of day, purchase trends over the course of a year, and other related relationships derived from the data. -->
-1. compare number of titles released each year
-2. compare number of released categories each year
-3. most active director
-4. which country releases the most each year?
+uncover patterns in Netflix and Amazon releases. We'll examine the relationships between show/movie types, location, quantity and directors over the release years of contents uploaded, and other related relationships derived from the data.
 
-
-* Using relational db - pgAdmin
+Using relational database (pgAdmin) we hope find correlation in the following topics:
+1. compare the number of released titles each year
+2. compare the number of released categories each year
+3. compare the most active directors
+4. compare the number country releases per year
 
 
 ## Sources:
 
-We had 2 csv files from [Kaggle Datasets](https://www.kaggle.com/datasets/):
+We looked at [Kaggle Datasets](https://www.kaggle.com/datasets/) and sourced 2 csv files of interest to the group:
 * [Netflix Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 * [Amazon Prime Movies & TV Shows](https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows)
-
 
 <!-- 
 
@@ -39,10 +38,9 @@ We had 2 csv files from [Kaggle Datasets](https://www.kaggle.com/datasets/):
 
 -->
 
-
 ## Extraction
 
-Insert head snippets of original csv dfs:
+Looking at the general contents of each original dataset against the topics of analysis, we were able to see which columns were valuable to conduct our analysis, and which we were able to discard. Here are samples of the original datasets we had sourced:
 
 * Netflix original df with 12 columns
 ![Netflix_original_df.png](Images/Netflix_original_df.png)
@@ -53,16 +51,19 @@ Insert head snippets of original csv dfs:
 
 ## Transform
 
-* insert head snippets of shrunken csv dfs (second df)
+Having looked at the topics of analysis, we cleaned the datasets and discarded the unwanted columns that we wouldn't use.
 
-For both dfs:
-1. import csvs into ipynb to clean
-2. renamed column name
-3. extract columns required
+For both datasets, we:
+1. imported csv files into Jupyter Notebook to clean
+2. renamed some column names to show data significance
+3. extract columns required, discarded unwanted columns
 4. convert string into list strings
 5. explode rows into multiples rows for category column
 
-* insert screenshots of cleaned df and graphs
+Hree are samples of the cleaned datasets after cleaning:
+![Netflix_cleaned_df.png](Images/Netflix_cleaned_df.png)
+![Amazon_cleaned_df.png](Images/Amazon_cleaned_df.png)
+
 
 ## Load
 
@@ -72,14 +73,51 @@ For both dfs:
     * with `id serial as primary key` to link the 2 tables together
 * loaded data from Pandas to sql
 
+![Amazon_sql_table.png](Images/Amazon_sql_table.png)
+![Netflix_sql_table.png](Images/Netflix_sql_table.png)
+
 ### SQL Query
 
 * SQL queries
 * insert screenshots of cleaned df and graphs
 
 ### Pandas & Matplotlib
-* make some diagrams
-* insert screenshots of cleaned df and graphs
+
+To produce some visual representation of the data we have looked at we created some graphs by querything the DataFrames.
+
+
+#### 1. compare the number of released titles each year
+
+A Pandas DataFrame was created for each platform's `release_year` and `title count` to compare the quantity of titles each platform was uploading for showing. 
+
+We found that Amazon continues to release newer shows and movies, than Netflix does. Netflix has been releasing older content.
+
+![Release_year.png](Images/Release_year.png)
+
+#### 2. compare the number of released categories each year
+
+Categories was tricky to compare across both platforms, since both had their own versions of category names, so we had to clean the data by merging categories most commonly found together. Then filtering to show the most popular category genres released.
+
+We found that Netflix has a high quantity of International (non-English) content than Amazon does. The all-rounder most popular content released across both platforms is Drama.
+
+![categories.png](Images/categories.png)
+
+#### 3. compare the most active directors
+
+To compare the most active directors released across each platform, we filtered out directors with less than 10 recurrences first, then kept only the top 10 directors of each platform. 
+
+![Netflix_directors.png](Images/Netflix_directors.png)
+![Amazon_directors.png](Images/Amazon_directors.png)
+
+
+
+We decided to merge the dataframes and display the most active directs in comparison across the platforms. The analysis shows that although most directors didn't overlap in platform, there was one most recurring director that has shows/movies released on both platforms `Jay Chapman`.
+Also, the data shows that Amazon tended to release content of the same director more than Netflix.
+
+![directors.png](Images/directors.png)
+
+#### 4. compare the number country releases per year
+
 
 
 <!--
