@@ -105,8 +105,11 @@ We found that Netflix has a high quantity of International (non-English) content
 3. compare the most active directors
 
 To compare the most active directors released across each platform, we filtered out directors with less than 10 recurrences first, then kept only the top 10 directors of each platform. 
+
 ![Netflix_directors.png](Images/Netflix_directors.png)
 ![Amazon_directors.png](Images/Amazon_directors.png)
+
+
 
 We decided to merge the dataframes and display the most active directs in comparison across the platforms. The analysis shows that although most directors didn't overlap in platform, there was one most recurring director that has shows/movies released on both platforms `Jay Chapman`.
 Also, the data shows that Amazon tended to release content of the same director more than Netflix.
