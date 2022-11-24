@@ -113,7 +113,6 @@ The following queries were implemented to extract data from Postgres SQL databas
 
 ​![query-02-netflix](Images/query-02-netflix.png)
 
-​
 3. Listing the movies that are present in both Netflix and Amazon Prime:
 
 ​![query-03](Images/query-03.png)​
@@ -121,6 +120,7 @@ The following queries were implemented to extract data from Postgres SQL databas
 4. Listing the movies that are exclusively to Netflix
 
 ​![query-04-netflix](Images/query-04-netflix.png)
+
 
 ### Pandas & Matplotlib
 
@@ -168,9 +168,8 @@ We found that Netflix has a high quantity of International (non-English) content
 
 To compare the most active directors released across each platform, we filtered out the directors with less than 10 recurrences first, then kept only the top 10 directors of each platform. 
 
-![Netflix_directors.png](Images/Netflix_directors.png)
-
-![Amazon_directors.png](Images/Amazon_directors.png)
+![netflix_directors.png](Images/netflix_directors.png)
+![amazon_directors.png](Images/amazon_directors.png)
 
 We decided to merge the dataframes and display the most active directors in comparison across the platforms. The analysis shows that although most directors didn't overlap in platform, there was one most recurring director that has shows/movies released on both platforms `Jay Chapman`.
 Also, the data shows that Amazon tended to release content of the same director more than Netflix.
@@ -188,10 +187,9 @@ We can see from this graph that similarly with Netflix, Amazon too releases from
 
 ![amazon_countries.png](Images/amazon_countries.png)
 
-Combining the two bar charts together shows that Netflix has 10x more releases that Netflix in comparison.
+Combining the two bar charts together shows that Netflix has 10x more releases than Netflix in comparison.
 
 ![countries.png](Images/countries.png)
-
 
 <!--
 
@@ -200,7 +198,6 @@ Combining the two bar charts together shows that Netflix has 10x more releases t
 √ The README is customized to a professional level
 
  -->
-
 
 [Project 2 Rubric](https://docs.google.com/document/d/1-sJWb5pq3OeFBPAZ_IDXR9LJvY7PoCUickgjTsPVnWo/edit)
 
