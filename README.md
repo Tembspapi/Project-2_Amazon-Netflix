@@ -30,15 +30,8 @@ We looked at [Kaggle Datasets](https://www.kaggle.com/datasets/) and sourced 2 c
 * [Netflix Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 * [Amazon Prime Movies & TV Shows](https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows)
 
-<!-- 
 
-√ Extract: indicates the original data sources and how the data were formatted at a professional level
-√ Transform: explains what data clearing or transformation was required at a professional level
-√ Load: explains the final database, tables/collections, and why the topic was chosen at a professional level 
-
--->
-
-## Extraction
+## Extraction
 
 Looking at the general contents of each original dataset against the topics of analysis, we were able to see which columns were valuable to conduct our analysis, and which we were able to discard. Here are samples of the original datasets we had sourced:
 
@@ -51,7 +44,7 @@ Looking at the general contents of each original dataset against the topics of a
 ![Amazon_original_df.png](Images/Amazon_original_df.png)
 
 
-## Transform
+## Transform
 
 Having looked at the topics of analysis, we cleaned the datasets and discarded the unwanted columns that we wouldn't use.
 
@@ -68,9 +61,9 @@ Hree are samples of the cleaned datasets after cleaning:
 ![Amazon_cleaned_df.png](Images/Amazon_cleaned_df.png)
 
 
-## Load
+## Load
 
-### SQL Query
+### SQL Query
 
 For this project, it was used **Postgres** as SQL database.
 ​
@@ -96,37 +89,37 @@ The following SQL script can be used to create the table schema for `Amazon` tab
 ![Amazon_sql_table.png](Images/Amazon_sql_table.png)​
 ​
 ### Importing Data to SQL Database
-​
+
 A script in Python using Pandas was written to import the data into the Postgres database tables. This process was executed after the data cleanup and transform the DataFrame.
-​
+
 
 ## Queries
-​
+
 The following queries were implemented to extract data from Postgres SQL database:
-​
+
 1. Checking the data was imported successfully
 
 ![query-01-amazon](Images/query-01-amazon.png)
 ![query-01-netflix](Images/query-01-netflix.png)
-​
+
 2. Listing the movies released before 2017 in Netflix
 
-​![query-02-netflix](Images/query-02-netflix.png)
+![query-02-netflix](Images/query-02-netflix.png)
 
 3. Listing the movies that are present in both Netflix and Amazon Prime:
 
-​![query-03](Images/query-03.png)​
-​
+![query-03](Images/query-03.png)
+
 4. Listing the movies that are exclusively to Netflix
 
-​![query-04-netflix](Images/query-04-netflix.png)
+![query-04-netflix](Images/query-04-netflix.png)
 
 
 ### Pandas & Matplotlib
 
 To produce some visual representation of the data we have looked at, we created some graphs by querything the DataFrames.
 
-#### 1. compare the number of released titles each year
+#### 1. Compare the number of released titles each year
 
 A Pandas DataFrame was created for each platform's `release_year` and `title count` to compare the quantity of titles each platform was uploading for showing. 
 
@@ -136,7 +129,7 @@ We found that Amazon continues to release newer shows and movies, than Netflix d
 
 ![Release_year.png](Images/Release_year.png)
 
-#### 2. compare the number of released categories each year
+#### 2. Compare the number of released categories each year
 
 Categories was tricky to compare across both platforms, since both had their own versions of `category` names, so we had to clean the data by merging and grouping these generic categories together. Then filtering to show the most popular category genres released.
 
@@ -164,7 +157,7 @@ We found that Netflix has a high quantity of International (non-English) content
 
 ![categories.png](Images/categories.png)
 
-#### 3. compare the most active directors
+#### 3. Compare the most active directors
 
 To compare the most active directors released across each platform, we filtered out the directors with less than 10 recurrences first, then kept only the top 10 directors of each platform. 
 
@@ -176,7 +169,7 @@ Also, the data shows that Amazon tended to release content of the same director 
 
 ![directors.png](Images/directors.png)
 
-#### 4. compare the number country releases per year
+#### 4. Compare the number country releases per year
 
 To compare the platforms for their releases by country required cleaning the data by separating each country from the combined fields of each title. It  was tricky, since each listing had all countries duplicated with a space after exploding the rows, e.g. ` United Kingdom`.
 
