@@ -109,16 +109,14 @@ The following queries were implemented to extract data from Postgres SQL databas
 ![query-01-amazon](Images/query-01-amazon.png)
 ![query-01-netflix](Images/query-01-netflix.png)
 ​
-​
 2. Listing the movies released before 2017 in Netflix
 
 ​![query-02-netflix](Images/query-02-netflix.png)
-​
+
 ​
 3. Listing the movies that are present in both Netflix and Amazon Prime:
 
-​![query-03](Images/query-03.png)
-​
+​![query-03](Images/query-03.png)​
 ​
 4. Listing the movies that are exclusively to Netflix
 
