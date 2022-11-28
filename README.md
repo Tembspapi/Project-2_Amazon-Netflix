@@ -192,6 +192,13 @@ Combining the two bar charts together shows that Netflix has 10x more releases t
 
  -->
 
+### Project contributions
+1. We all worked on the proposal collectively
+2. Cheila worked on data extraction, transformation, loading: SQL querying
+3. Grace worked on data transformation, loading: Pandas & Matplotlib visulatisations
+4. Anderson & Lionnel reviewed the loaded data and visualisations
+5. We all worked on the report collectively
+
 [Project 2 Rubric](https://docs.google.com/document/d/1-sJWb5pq3OeFBPAZ_IDXR9LJvY7PoCUickgjTsPVnWo/edit)
 
 - - -
